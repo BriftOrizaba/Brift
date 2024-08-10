@@ -1,0 +1,442 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    align-items: center;
+}
+
+.logo img {
+    height: 35px;
+    padding: 1px 20px;
+    margin-right: 10px;
+    transform: scale(2.5); /* Escala la imagen un 50% más grande */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.phone i {
+    margin-right: 5px;
+}
+
+.language-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.language-label {
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.language-select {
+    position: relative;
+    display: inline-block;
+}
+
+.language-select select {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.language-select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333;
+}
+
+.content {
+    padding: 100px 20px 20px 20px;
+    text-align: center;
+}
+
+section {
+    padding: 40px 0;
+}
+
+#empresa {
+    background: linear-gradient(to right, #135224, rgb(12, 215, 90)); /* Degradado de verde oscuro a verde más claro */
+    color: white;
+}
+
+#porque {
+    background: linear-gradient(to right, #8eb5b5, #c0d8d8); /* Degradado de verde azulado a un verde más claro */
+    color: white;
+}
+
+.empresa-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 20px;
+}
+.empresa-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 20px;
+}
+
+.empresa-container img {
+    max-width: 36%; /* Asegura que la imagen no ocupe más del 45% del ancho */
+    height: auto;
+    margin-bottom: 20px;
+    order: 1; /* Muestra la imagen primero en pantallas grandes */
+}
+.empresa-container1 img {
+    max-width: 36%; /* Asegura que la imagen no ocupe más del 45% del ancho */
+    height: auto;
+    margin-bottom: 20px;
+    order: 3; /* Muestra la imagen primero en pantallas grandes */
+}
+
+.empresa-description {
+    max-width: 50%; 
+    order: 2;
+    padding: 20px;
+    background: linear-gradient(135deg, #050c09, #1a1a1a); /* Degradado de verde */
+    color: white; /* Asegura que el texto sea legible sobre el fondo verde */
+    border-radius: 10px; /* Opcional: Añade esquinas redondeadas */
+}
+.empresa-description1 {
+    max-width: 50%; 
+    order: 1;
+    padding: 20px;
+    background: linear-gradient(135deg, #050c09, #1a1a1a); /* Degradado de verde */
+    color: white; /* Asegura que el texto sea legible sobre el fondo verde */
+    border-radius: 10px; /* Opcional: Añade esquinas redondeadas */
+}
+
+#contact {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+footer {
+    background: linear-gradient(to right, #e440ae, #f0546d); /* Degradado de fucsia a rojo suave */
+    color: rgb(3, 3, 3);
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido de manera que se ajuste a los bordes */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+.footer-left {
+    flex: 1; /* Permite que el contenido en el lado izquierdo ocupe el espacio disponible */
+}
+
+.footer-right {
+    flex: 1; /* Permite que el contenido en el lado derecho ocupe el espacio disponible */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.footer-right p {
+    margin: 0 0 10px 0; /* Espacio inferior para separar el título de los nombres */
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los nombres se muevan a la siguiente línea si no caben */
+    justify-content: flex-end; /* Alinea los nombres al final (derecha) */
+}
+
+.members span {
+    margin: 0 10px; /* Espacio entre los nombres */
+    display: block; /* Cada nombre en una línea separada */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        margin: 5px 0;
+    }
+
+    .phone {
+        margin: 10px 0;
+    }
+
+    .language-container, 
+    .menu-toggle {
+        margin: 10px 0;
+    }
+
+    .content {
+        padding-top: 120px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 30px;
+    }
+
+    #contact {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+
+#productos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.products-container {
+    overflow: hidden; /* Oculta la barra de desplazamiento horizontal */
+    position: relative;
+}
+
+.products-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.product {
+    flex: 0 0 auto; /* No permitir que las imágenes se redimensionen */
+    width: 200px; /* Ajusta el tamaño de cada producto */
+    margin: 10px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para la barra de desplazamiento personalizada */
+.products-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.products-container::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+
+#productos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+.products-container {
+    overflow: hidden; /* Oculta la barra de desplazamiento horizontal */
+    position: relative;
+    width: 100%; /* Asegúrate de que el contenedor se ajuste al ancho del viewport */
+}
+
+.products-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite; /* Animación automática */
+}
+
+.product {
+    flex: 0 0 auto; /* No permitir que las imágenes se redimensionen */
+    width: 200px; /* Ajusta el tamaño de cada producto */
+    margin: 10px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para la barra de desplazamiento personalizada */
+.products-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.products-container::-webkit-scrollbar-track {
+    background-color: #f4f4f4;
+}
+
+/* Animación para el desplazamiento automático */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Para evitar la animación cuando el usuario está interactuando */
+.products-container:hover .products-wrapper {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .empresa-container {
+        flex-direction: column;
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .empresa-container img,
+    .empresa-description {
+        max-width: 100%; /* Imagen y texto ocupan el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .empresa-container1 {
+        flex-direction: column;
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .empresa-container1 img,
+    .empresa-description1 {
+        max-width: 100%; /* Imagen y texto ocupan el 100% del ancho en pantallas pequeñas */
+    }
+}
